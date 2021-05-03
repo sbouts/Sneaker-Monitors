@@ -1,5 +1,8 @@
-# Sneaker Monitors
-*A collection of web monitors that notify of restocks or updates on sneaker related sites through Discord Webhook*
+# Sneaker Monitors Documentation
+
+Here, you will find basic documentation on setting up the monitors.
+
+## Contents
 
 
 ## Installation
