@@ -8,22 +8,22 @@ Here, you will find basic documentation on setting up the monitors.
 ## Installation
 Ensure you have [Python 3+](https://www.python.org/downloads/) and [pip](https://pip.pypa.io/en/stable/installing/) installed. 
 
-To install the dependencies, use the command:
+To install the dependencies, use the command in Terminal or Command Prompt:
 ```
 pip install -r requirements.txt
 ```
 
 ## Set Up
 
-1. First perform the installation described in [#Installation](#installation).
-
-2. Clone or Download the repository
+1. Clone or Download the repository
     - Clone:
     ```
     git clone https://github.com/yasserqureshi1/Sneaker-Monitors.git
     ```
     - Download: Click on the green `Code` button and click on `Download ZIP`. Then unzip this folder
-    
+
+2. Then navigate to the folder that the repository is stored in Terminal or Command Prompt and perform the installation described in [#Installation](#installation).
+
 3. Start editting the `.env` file to your specifications. You will only be interacting with the ```.env``` file.
     - **Add Webhook**: Paste your Discord Webhook URL under the `WEBHOOK` variable. It should look like this:
     ```
