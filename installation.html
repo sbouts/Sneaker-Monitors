@@ -1,0 +1,236 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>Sneaker Monitors - Getting Started</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Header -->
+					<header id="header" class="alt">
+						<span class="logo"><img src="images/logo.PNG" style="width: 200px;height: auto;" alt="" /></span>
+						<figcaption>Logo made by <a href="https://www.instagram.com/bri.illustratesz/">@bri.illustratesz</a></figcaption>
+						<h1>Sneaker Monitors</h1>
+						<p>A collection of web monitors that notify of restocks or updates on sneaker related sites through Discord Webhook. Built by <a href="https://github.com/yasserqureshi1">Yasser</a></p>
+					</header>
+
+				<!-- Nav -->
+					<nav id="nav">
+						<ul>
+							<li><a href="index.html">Home</a></li>
+							<li><a href="monitors.html">Available Monitors</a></li>
+							<li><a href="installation.html" class="active">Getting Started</a></li>
+							<li><a href="params.html">Parameters</a></li>
+							<li><a href="faqs.html">FAQs</a></li>
+						</ul>
+					</nav>
+
+				<!-- Main -->
+					<div id="main">
+
+						<!-- Introduction -->
+							<section id="intro" class="main">
+								<div class="spotlight">
+									<div class="content">
+										<header class="major">
+											<h2 style="text-align: center;">Getting Started</h2>
+										</header>
+                                        <p>
+                                            On this page, you will find steps to install and set-up the monitors from scratch.
+                                            <br><br>
+                                            If you'd rather follow a video tutorial, I have made some below.
+                                            I recommend first testing out the scripts locally (on your PC) to ensure that you have the webhooks and other details set up.
+                                            Then you should set them up on a server to run continuously.
+                                        </p>
+                                        <ul class="actions special">
+                                            <li><a href="https://www.youtube.com/watch?v=mUTGCzWIDQk" class="button">Set up Locally</a></li>
+                                            <li><a href="https://www.youtube.com/watch?v=nmUSSlt4JKk" class="button">Set up on a Server</a></li>
+                                        </ul>
+									</div>
+								</div>
+							</section>
+
+                            <section id="content" class="main">
+								<div class="content">
+									<h3 style="text-align:center;">Installing Python and PIP</h3>
+									<p style="text-align:center;">
+										The monitors are built using Python 3, so you will need to have this installed. 
+										You can check whether you have it installed using the command in Terminal or Command Prompt:
+										<br>
+										<code>python --version</code>
+										<br>
+										<br>
+										<strong>Windows:</strong> Download and install Python from the <a href="https://www.microsoft.com/en-us/p/python-38/9mssztt1n39l?activetab=pivot:overviewtab">Microsoft Store</a>.
+										<br>
+										<strong>MacOS: </strong> Download and install Python from the <a href="https://www.python.org/downloads/mac-osx/">Python Website</a>.
+										<br>
+										<strong>Linux: </strong> Install Python using the command: <code>sudo apt-get install python3.8</code>
+										<br>
+										<br>
+										<br>
+										Ensure you have PIP installed as well. It is a Python package installer and will be used to install all the dependencies.
+										Usually PIP is installed with Python, but to check if you have it installed, use the command in Terminal or Command Prompt:
+										<br>
+										<code>pip --version</code>
+										<br>
+										<br>
+										If you haven't got it installed, you can use the commands:
+										<br>
+										<code>curl https://bootstrap.pypa.io/get-pip.py -o get-pip.py</code>
+										<br>
+										<br>
+										Then:
+										<br>
+										<strong>Windows: </strong><code>py get-pip.py</code>
+										<br>
+										<strong>MacOS/Linux: </strong><code>python get-pip.py</code>
+									</p>
+									
+								</div>
+                            </section>
+							
+							<section class="main">
+								<div class="spotlight">
+									<div class="content">
+										<h3 style="text-align:center;">Downloading the Files</h3>
+										<p style="text-align:center;">
+											There are two ways to do this. You can either download the ZIP folder or clone the repo.
+											Cloning the repo makes it easier to recieve updates.
+											<br>
+											<br>
+											<strong>1. Download ZIP</strong>
+											<br>
+											Click on the green Code button and click on Download ZIP. Then unzip this folder.
+											<br>
+											<br>
+											<strong>2. Clone</strong>
+											<br>
+											Use <a href="https://git-scm.com">git</a> to clone the repo using the command:
+											<br>
+											<code>git clone https://github.com/yasserqureshi1/Sneaker-Monitors.git</code>
+										</p>
+									</div>
+								</div>
+                            </section>
+
+							<section class="main">
+								<div class="spotlight">
+									<div class="content">
+										<h3 style="text-align:center;">Setting Up</h3>
+										<p style="text-align:center;">
+											Now we can set up the monitors to our specifications.
+										</p>
+										<p>
+											<strong>1. Install the dependencies </strong>
+											<br>
+											Using Terminal or Command Prompt navigate to the downloaded/cloned folder. 
+											This can be performed using the <code>cd</code> command, that allows you to change directories as follows: 
+											<br>
+											<pre><code>C:\Users\Desktop> cd Sneaker-Monitors-master<br>C:\Users\Desktop\Sneaker-Monitors-master</code></pre>
+										</p>
+										<p>
+											Then install the dependencies using PIP:
+											<br>
+											<code>pip install -r requirements.txt</code>
+											<br>
+											<br>
+											<br>
+											<strong>2. Edit the <code>.ENV</code> File </strong>
+											<br>
+											Now, we can started customising the monitor. 
+											For this, we will only need to use the <code>.ENV</code> file.
+											<br>
+											<br>
+											<i style="text-decoration: underline;">Webhook:</i>
+											 Paste your Discord Webhook URL under the <code>WEBHOOK</code> variable. It should look like this:
+											<br>
+											<code>WEBHOOK = "https://discord.com/api/webhooks/..."</code>
+											<br>
+											<br>
+											<i style="text-decoration: underline;">(Optional) Proxies:</i>
+											 Paste your proxy under the <code>PROXY</code> variable. There are two structures:
+											 <br>
+											 a) <code>PROXY = "&lt;proxy&gt;:&lt;port&gt;"</code>
+											 <br>
+											 b) <code>PROXY = "&lt;proxy_username&gt;:&lt;proxy_password&gt;@&lt;proxy_domain&gt;:&lt;port&gt;"</code>
+											 <br>
+											 <br>
+											There are many other ways to customise the monitor and some monitors will require further details to work.
+											More details on this can be found <a href="params.html">here</a>.
+										</p>
+										<p>
+											<strong>3. Run the Python file</strong>
+											<br>
+											Now we run the particular file. 
+											In Terminal or Command Prompt, navigate to the directory housing the particular Python file (this was mentioned previously using the <code>cd</code> command). 
+											Then use the following command to run the file:
+											<br>
+											<code>python [monitor].py</code>
+										</p>
+									</div>
+								</div>
+                            </section>
+						
+							<section class="main">
+								<div class="spotlight">
+									<div class="content">
+										<h3 style="text-align:center;">What next?</h3>
+										<p style="text-align:center;">
+											Once set up, the monitors instally start monitoring for changes.
+											All you need to do is wait for the website to release or restock a product, and you should get notified.
+											<br>
+											<br>
+											If you set these up on your local PC and they seem to work, I suggest using a server.
+											A server will run the code continuously so that changes are always picked up.
+											There are some free trials that you can use, before commiting to a permanent solution.
+											These include:
+											<br>
+											<ul>
+												<li><a href="https://cloud.google.com/free">Google Cloud</a></li>
+												<li><a href="https://aws.amazon.com/free/">Amazon Web Services (AWS)</a></li>
+												<li><a href="https://azure.microsoft.com/en-gb/free/">Microsoft Azure</a></li>
+											</ul>
+										</p>
+									</div>
+								</div>
+                            </section>
+
+						<!-- Discord Server -->
+						<section id="cta" class="main special">
+							<header class="major">
+								<h2>Join the Discord Server...</h2>
+								<p>We have a Discord Server where you can get help and contribute in a growing community of open source sneakerheads.</p>
+							</header>
+							<footer class="major">
+								<ul class="actions special">
+									<li><a href="https://discord.gg/jjbtWcBczb" class="button large primary">Join Discord Server</a></li>
+								</ul>
+							</footer>
+						</section>
+
+					</div>
+
+				<!-- Footer -->
+					<footer id="footer">
+						<p class="copyright"><a href="https://github.com/yasserqureshi1/Sneaker-Monitors">Sneaker Monitors</a>. 2021.</p>
+					</footer>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>

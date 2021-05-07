@@ -1,0 +1,1465 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>Sneaker Monitors - Parameters</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Header -->
+					<header id="header" class="alt">
+						<span class="logo"><img src="images/logo.PNG" style="width: 200px;height: auto;" alt="" /></span>
+                        <figcaption>Logo made by <a href="https://www.instagram.com/bri.illustratesz/">@bri.illustratesz</a></figcaption>
+						<h1>Sneaker Monitors</h1>
+						<p>
+                            A collection of web monitors that notify of restocks or updates on sneaker related sites through Discord Webhook. 
+                            <br>
+                            Built by <a href="https://github.com/yasserqureshi1">Yasser</a>
+                        </p>
+					</header>
+
+				<!-- Nav -->
+					<nav id="nav">
+						<ul>
+							<li><a href="index.html">Home</a></li>
+							<li><a href="monitors.html">Available Monitors</a></li>
+							<li><a href="installation.html">Getting Started</a></li>
+							<li><a href="params.html" class="active">Parameters</a></li>
+							<li><a href="faqs.html">FAQs</a></li>
+						</ul>
+					</nav>
+
+				<!-- Main -->
+					<div id="main">
+
+						<!-- Introduction -->
+							<section id="intro" class="main">
+								<div class="spotlight">
+									<div class="content">
+										<header class="major">
+											<h2 style="text-align: center;">Parameters</h2>
+										</header>
+                                        <p>
+                                            Here you will find additional parameters that can be set and how you can further customise the monitors.
+                                            <br>
+											<br>
+											<h3>Contents:</h3>
+											<br>
+											<ul>
+												<li><a href="#general-parameters">General Parameters</a></li>
+												<li><a href="#free-proxy">Free Proxy</a></li>
+												<li><a href="#monitor-specific-params">Monitor Specific Parameters</a></li>
+												<ul>
+													<li><a href="#snkrs">SNKRS</a></li>
+													<li><a href="#shopify">Shopify</a></li>
+													<li><a href="#solebox">Solebox</a></li>
+												</ul>
+											</ul>
+                                        </p>
+									</div>
+								</div>
+							</section>
+
+						<!-- General Parameters -->
+							<section id="general-parameters" class="main">
+								<div class="content">
+									<h3 style="text-align:center;">General Parameters</h3>
+									<p style="text-align:center;">
+										There are a few standard parameters that need to be set for all monitors.
+										Here, I will mention how they should be set up and ways to customise them.
+									</p>
+									<p>
+										<strong>Discord Webhook: </strong>
+										<br>
+										This should be pasted from your Discord Channel.
+										It should be formatted as such:
+										<br>
+										<br>
+										<code>WEBHOOK = "https://discord.com/api/webhooks/..."</code>
+									</p>
+									<p>
+										<strong>Location: </strong>
+										<br>
+										This is a location code that finds free proxies for your area. 
+										You can find a list of the codes <a href="#free-proxy">here</a>.
+										<br>
+										<br>
+										<code>LOCATION = "GB"</code>
+									</p>
+									<p>
+										<strong>Delay: </strong>
+										<br>
+										This is the delay in seconds between requests.
+										Sometimes higher/lower delays may work better.
+										<br>
+										<br>
+										<code>DELAY = "1"</code>
+									</p>
+									<p>
+										<strong>Proxy: </strong>
+										<br>
+										This is an optional parameter where you can set your own proxies. 
+										There are two formats:
+										<br>
+										a) <code>PROXY = "&lt;proxy&gt;:&lt;port&gt;"</code>
+										<br>
+										b) <code>PROXY = "&lt;proxy_username&gt;:&lt;proxy_password&gt;@&lt;proxy_domain&gt;:&lt;port&gt;"</code>
+										<br>
+										You can use multiple proxies by seperating each proxy with a <code>%</code>.		 
+										<br>
+										<br>
+										<code>PROXY = "000.000.000.00:111%222.222.222.22:333"</code>
+									</p>
+									<p>
+										<strong>Keywords: </strong>
+										<br>
+										This is an optional parameter which will allow you to only get notified of specific products that contain any of these keywords within its product name.
+										You can use multiple keywords by seperating each keyword with a <code>%</code>.
+										<br>
+										<br>
+										<code>KEYWORDS = "box%logo"</code>
+									</p>
+									<p>
+										<strong>Discord Bot - Username: </strong>
+										<br>
+										This is the username that the bot will use.
+										<br>
+										<br>
+										<code>USERNAME = "Supreme Monitor"</code>
+									</p>
+									<p>
+										<strong>Discord Bot - Avatar: </strong>
+										<br>
+										This is the avatar that that bot will use on Discord. 
+										You can provide either a url to the image or the path to the image (if the image is stored locally).
+										<br>
+										<br>
+										<code>AVATAR_URL = "path/to/image.jpg"</code>
+									</p>
+									<p>
+										<strong>Discord Bot - Colour: </strong>
+										<br>
+										This is the colour that that bot will use on Discord. 
+										The code must be a decimal number. 
+										You can use a colour picker such as <a href="https://www.colorhexa.com">ColorHexa</a> to choose a colour, but then convert the hexadecimal number to decimal.
+										<br>
+										<br>
+										<code>COLOUR = 12845619</code>
+									</p>
+								</div>
+                            </section>
+						
+						<!-- Free Proxy -->
+							<section id="free-proxy" class="main">
+								<div class="content">
+									<h3 style="text-align:center;">Free Proxy Service</h3>
+									<p style="text-align:center;">
+										The monitors already come with a free proxy service set up. 
+										These proxies are scraped from <a href="https://www.sslproxies.org">SSL Proxies</a>. 
+										Note that I do not have any affiliation with them and you these proxies at your own risk.
+										<br>
+										<br>
+										To use these monitors, the <code>LOCATION</code> parameter needs to be set.
+										A list of them can be found below:
+									</p>
+									<!-- INSERT TABLE OF CODES -->
+								</div>
+                            </section>
+
+
+						<!-- Monitor Specific Parameters -->
+							<section id="monitor-specific-params" class="main">
+								<div class="content">
+									<h3 style="text-align:center;">Monitor Specific Parameters</h3>
+									<p style="text-align:center;">
+										Some monitors require a few extra details.
+										This section will mention those parameters and hwo they should be set.
+									</p>
+									<div id="snkrs">
+										<p>
+											<strong>Nike SNKRS</strong>
+											<br>
+											The SNKRS monitor can be used in 42 countries. 
+											To set it up for your location, please find the 2 letter country code and the language code in the table below.
+											<br>
+											<br>
+											Example: If I want the Belgium site, I find the corresponding country code and language code in the table.
+											We see that the country code is <code>"BE>"</code>, and there are 4 choices for the language (<code>en-GB</code>, <code>nl</code>, <code>de</code> or <code>fr</code>).
+											Choose the language you want. In this case I want English, so will use <code>en-GB</code>.
+											Below is how it should be set up
+											<br>
+											<pre><code>LOC = "BE"
+LAN = "en-GB"</code></pre>
+											<br>
+											<b>Table of Country and Language Codes:</b>
+										</p>
+										<div class="table-wrapper">
+											<table class="alt">
+												<thead>
+													<tr>
+														<th>Country</th>
+														<th>2 Letter Country Code</th>
+														<th>Language Code</th>
+													</tr>
+												</thead>
+												<tbody>
+													<tr>
+														<td>United Kingdom</td>
+														<td>GB</td>
+														<td>en-GB</td>
+													</tr>
+													<tr>
+														<td>United States</td>
+														<td>US</td>
+														<td>en</td>
+													</tr>
+													<tr>
+														<td>Australia</td>
+														<td>AU</td>
+														<td>en-GB</td>
+													</tr>
+													<tr>
+														<td>Austria</td>
+														<td>AT</td>
+														<td>en-GB / de</td>
+													</tr>
+													<tr>
+														<td>Belgium</td>
+														<td>BE</td>
+														<td>en-GB / nl / de / fr</td>
+													</tr>
+													<tr>
+														<td>Bulgaria</td>
+														<td>BG</td>
+														<td>en-GB</td>
+													</tr>
+													<tr>
+														<td>Canada</td>
+														<td>CA</td>
+														<td>en-GB / fr</td>
+													</tr>
+													<tr>
+														<td>Chile</td>
+														<td>CL</td>
+														<td>es-419</td>
+													</tr>
+													<tr>
+														<td>China</td>
+														<td>CN</td>
+														<td>zh-Hans</td>
+													</tr>
+													<tr>
+														<td>Croatia</td>
+														<td>HR</td>
+														<td>en-GB</td>
+													</tr>
+													<tr>
+														<td>Czechia</td>
+														<td>CZ</td>
+														<td>en-GB / cs</td>
+													</tr>
+													<tr>
+														<td>Denmark</td>
+														<td>DK</td>
+														<td>en-GB / da</td>
+													</tr>
+													<tr>
+														<td>Egypt</td>
+														<td>EG</td>
+														<td>en-GB</td>
+													</tr>
+													<tr>
+														<td>Finland</td>
+														<td>FI</td>
+														<td>en-GB</td>
+													</tr>
+													<tr>
+														<td>France</td>
+														<td>FR</td>
+														<td>fr</td>
+													</tr>
+													<tr>
+														<td>Germany</td>
+														<td>DE</td>
+														<td>de</td>
+													</tr>
+													<tr>
+														<td>Hungary</td>
+														<td>HU</td>
+														<td>en-GB</td>
+													</tr>
+													<tr>
+														<td>India</td>
+														<td>IN</td>
+														<td>en-GB</td>
+													</tr>
+													<tr>
+														<td>Indonesia</td>
+														<td>ID</td>
+														<td>en-GB</td>
+													</tr>
+													<tr>
+														<td>Ireland</td>
+														<td>IE</td>
+														<td>en-GB</td>
+													</tr>
+													<tr>
+														<td>Italy</td>
+														<td>IT</td>
+														<td>it</td>
+													</tr>
+													<tr>
+														<td>Malaysia</td>
+														<td>MY</td>
+														<td>en-GB</td>
+													</tr>
+													<tr>
+														<td>Mexico</td>
+														<td>MX</td>
+														<td>es-419</td>
+													</tr>
+													<tr>
+														<td>Morocco</td>
+														<td>MA</td>
+														<td>en-GB / fr</td>
+													</tr>
+													<tr>
+														<td>Netherlands</td>
+														<td>NL</td>
+														<td>en-GB / nl</td>
+													</tr>
+													<tr>
+														<td>New Zealand</td>
+														<td>NZ</td>
+														<td>en-GB</td>
+													</tr>
+													<tr>
+														<td>Norway</td>
+														<td>NO</td>
+														<td>en-GB / no</td>
+													</tr>
+													<tr>
+														<td>Philippines</td>
+														<td>PH</td>
+														<td>en-GB</td>
+													</tr>
+													<tr>
+														<td>Poland</td>
+														<td>PL</td>
+														<td>pl</td>
+													</tr>
+													<tr>
+														<td>Portugal</td>
+														<td>PT</td>
+														<td>en-GB / es-419</td>
+													</tr>
+													<tr>
+														<td>Puerto Rico</td>
+														<td>PR</td>
+														<td>es-419</td>
+													</tr>
+													<tr>
+														<td>Romania</td>
+														<td>RO</td>
+														<td>en-GB /</td>
+													</tr>
+													<tr>
+														<td>Russia</td>
+														<td>RU</td>
+														<td>ru</td>
+													</tr>
+													<tr>
+														<td>Saudi Arabia</td>
+														<td>SA</td>
+														<td>en-GB</td>
+													</tr>
+													<tr>
+														<td>Singapore</td>
+														<td>SG</td>
+														<td>en-GB</td>
+													</tr>
+													<tr>
+														<td>Slovenia</td>
+														<td>SI</td>
+														<td>en-GB</td>
+													</tr>
+													<tr>
+														<td>South Africa</td>
+														<td>ZA</td>
+														<td>en-GB</td>
+													</tr>
+													<tr>
+														<td>Spain</td>
+														<td>ES</td>
+														<td>es-ES / ca</td>
+													</tr>
+													<tr>
+														<td>Sweden</td>
+														<td>SE</td>
+														<td>en-GB / sv</td>
+													</tr>
+													<tr>
+														<td>Switzerland</td>
+														<td>CH</td>
+														<td>en-GB / fr / de / it</td>
+													</tr>
+													<tr>
+														<td>Turkey</td>
+														<td>TR</td>
+														<td>tr</td>
+													</tr>
+													<tr>
+														<td>UAE</td>
+														<td>AE</td>
+														<td>en-GB</td>
+													</tr>
+													<tr>
+														<td>Vietnam</td>
+														<td>VN</td>
+														<td>en-GB</td>
+													</tr>
+												</tbody>
+											</table>
+										</div>
+									</div>
+
+									<div id="shopify">
+										<p>
+											<strong>Shopify</strong>
+											<br>
+											The Shopify monitor requires you to put in the URL for a specific shopify store. 
+											Note that the URL must point to a <code>.json</code> endpoint.
+											<br>
+											<br>
+											Example: For the Hanon Shop, if we want to monitor new items, the address is...
+											<br>
+											<code>https://www.hanon-shop/collections/whats-new</code>
+											<br>
+											<br>
+											To get all the products in a <code>json</code> format, we can use the following address...
+											<br>
+											<code>https://www.hanon-shop/collections/whats-new/products.json</code>
+										</p>
+									</div>
+
+									<div id="solebox">
+										<p>
+											<strong>Solebox</strong>
+											<br>
+											The Solebox monitor can be used in numerous countries.
+											To set it up the monitor for your location, you can set the <code>LOC</code> to one of the country codes below. 
+											<br>
+											<b>Table of Country and Language Codes:</b>
+											<table class="alt">
+												<thead>
+													<tr>
+													<th>Country</th>
+													<th>Location code</th>
+													</tr>
+												</thead>
+												<tbody>
+													<tr>
+													<td>Afghanistan</td>
+													<td>AF</td>
+													</tr>
+													<tr>
+													<td>Aland Islands</td>
+													<td>AX</td>
+													</tr>
+													<tr>
+													<td>Albania</td>
+													<td>AL</td>
+													</tr>
+													<tr>
+													<td>Algeria</td>
+													<td>DZ</td>
+													</tr>
+													<tr>
+													<td>American Samoa</td>
+													<td>AS</td>
+													</tr>
+													<tr>
+													<td>Andorra</td>
+													<td>AD</td>
+													</tr>
+													<tr>
+													<td>Angola</td>
+													<td>AO</td>
+													</tr>
+													<tr>
+													<td>Anguilla</td>
+													<td>AI</td>
+													</tr>
+													<tr>
+													<td>Antarctica</td>
+													<td>AQ</td>
+													</tr>
+													<tr>
+													<td>Antigua and Barbuda</td>
+													<td>AG</td>
+													</tr>
+													<tr>
+													<td>Argentina</td>
+													<td>AR</td>
+													</tr>
+													<tr>
+													<td>Armenia</td>
+													<td>AM</td>
+													</tr>
+													<tr>
+													<td>Aruba</td>
+													<td>AW</td>
+													</tr>
+													<tr>
+													<td>Australia</td>
+													<td>AU</td>
+													</tr>
+													<tr>
+													<td>Austria</td>
+													<td>AT</td>
+													</tr>
+													<tr>
+													<td>Azerbaijan</td>
+													<td>AZ</td>
+													</tr>
+													<tr>
+													<td>Bahamas</td>
+													<td>BS</td>
+													</tr>
+													<tr>
+													<td>Bahrain</td>
+													<td>BH</td>
+													</tr>
+													<tr>
+													<td>Bangladesh</td>
+													<td>BD</td>
+													</tr>
+													<tr>
+													<td>Barbados</td>
+													<td>BB</td>
+													</tr>
+													<tr>
+													<td>Belarus</td>
+													<td>BY</td>
+													</tr>
+													<tr>
+													<td>Belgium</td>
+													<td>BE</td>
+													</tr>
+													<tr>
+													<td>Belize</td>
+													<td>BZ</td>
+													</tr>
+													<tr>
+													<td>Benin</td>
+													<td>BJ</td>
+													</tr>
+													<tr>
+													<td>Bermuda</td>
+													<td>BM</td>
+													</tr>
+													<tr>
+													<td>Bhutan</td>
+													<td>BT</td>
+													</tr>
+													<tr>
+													<td>Bolivia</td>
+													<td>BO</td>
+													</tr>
+													<tr>
+													<td>Bosnia and Herzegovina</td>
+													<td>BA</td>
+													</tr>
+													<tr>
+													<td>Botswana</td>
+													<td>BW</td>
+													</tr>
+													<tr>
+													<td>Bouvet Island</td>
+													<td>BV</td>
+													</tr>
+													<tr>
+													<td>Brazil</td>
+													<td>BR</td>
+													</tr>
+													<tr>
+													<td>British Indian Ocean Territory</td>
+													<td>IO</td>
+													</tr>
+													<tr>
+													<td>Brunei Darussalam</td>
+													<td>BN</td>
+													</tr>
+													<tr>
+													<td>Bulgaria</td>
+													<td>BG</td>
+													</tr>
+													<tr>
+													<td>Burkina Faso</td>
+													<td>BF</td>
+													</tr>
+													<tr>
+													<td>Burundi</td>
+													<td>BI</td>
+													</tr>
+													<tr>
+													<td>Cambodia</td>
+													<td>KH</td>
+													</tr>
+													<tr>
+													<td>Cameroon</td>
+													<td>CM</td>
+													</tr>
+													<tr>
+													<td>Canada</td>
+													<td>CA</td>
+													</tr>
+													<tr>
+													<td>Cape Verde</td>
+													<td>CV</td>
+													</tr>
+													<tr>
+													<td>Cayman Islands</td>
+													<td>KY</td>
+													</tr>
+													<tr>
+													<td>Central African Republic</td>
+													<td>CF</td>
+													</tr>
+													<tr>
+													<td>Chad</td>
+													<td>TD</td>
+													</tr>
+													<tr>
+													<td>Chile</td>
+													<td>CL</td>
+													</tr>
+													<tr>
+													<td>China</td>
+													<td>CN</td>
+													</tr>
+													<tr>
+													<td>Christmas Island</td>
+													<td>CX</td>
+													</tr>
+													<tr>
+													<td>Cocos (Keeling) Islands</td>
+													<td>CC</td>
+													</tr>
+													<tr>
+													<td>Colombia</td>
+													<td>CO</td>
+													</tr>
+													<tr>
+													<td>Comoros</td>
+													<td>KM</td>
+													</tr>
+													<tr>
+													<td>Congo</td>
+													<td>CG</td>
+													</tr>
+													<tr>
+													<td>Congo,The Democratic Republic Of The</td>
+													<td>CD</td>
+													</tr>
+													<tr>
+													<td>Cook Islands</td>
+													<td>CK</td>
+													</tr>
+													<tr>
+													<td>Costa Rica</td>
+													<td>CR</td>
+													</tr>
+													<tr>
+													<td>Croatia</td>
+													<td>HR</td>
+													</tr>
+													<tr>
+													<td>Cuba</td>
+													<td>CU</td>
+													</tr>
+													<tr>
+													<td>Cyprus</td>
+													<td>CY</td>
+													</tr>
+													<tr>
+													<td>Czech Republic</td>
+													<td>CZ</td>
+													</tr>
+													<tr>
+													<td>Denmark</td>
+													<td>DK</td>
+													</tr>
+													<tr>
+													<td>Djibouti</td>
+													<td>DJ</td>
+													</tr>
+													<tr>
+													<td>Dominica</td>
+													<td>DM</td>
+													</tr>
+													<tr>
+													<td>Dominican Republic</td>
+													<td>DO</td>
+													</tr>
+													<tr>
+													<td>Ecuador</td>
+													<td>EC</td>
+													</tr>
+													<tr>
+													<td>Egypt</td>
+													<td>EG</td>
+													</tr>
+													<tr>
+													<td>El Salvador</td>
+													<td>SV</td>
+													</tr>
+													<tr>
+													<td>Equatorial Guinea</td>
+													<td>GQ</td>
+													</tr>
+													<tr>
+													<td>Eritrea</td>
+													<td>ER</td>
+													</tr>
+													<tr>
+													<td>Estonia</td>
+													<td>EE</td>
+													</tr>
+													<tr>
+													<td>Ethiopia</td>
+													<td>ET</td>
+													</tr>
+													<tr>
+													<td>Falkland Islands (Malvinas)</td>
+													<td>FK</td>
+													</tr>
+													<tr>
+													<td>Faroe Islands</td>
+													<td>FO</td>
+													</tr>
+													<tr>
+													<td>Fiji</td>
+													<td>FJ</td>
+													</tr>
+													<tr>
+													<td>Finland</td>
+													<td>FI</td>
+													</tr>
+													<tr>
+													<td>France</td>
+													<td>FR</td>
+													</tr>
+													<tr>
+													<td>French Guiana</td>
+													<td>GF</td>
+													</tr>
+													<tr>
+													<td>French Polynesia</td>
+													<td>PF</td>
+													</tr>
+													<tr>
+													<td>French Southern Territories</td>
+													<td>TF</td>
+													</tr>
+													<tr>
+													<td>Gabon</td>
+													<td>GA</td>
+													</tr>
+													<tr>
+													<td>Gambia</td>
+													<td>GM</td>
+													</tr>
+													<tr>
+													<td>Georgia</td>
+													<td>GE</td>
+													</tr>
+													<tr>
+													<td>Germany</td>
+													<td>DE</td>
+													</tr>
+													<tr>
+													<td>Ghana</td>
+													<td>GH</td>
+													</tr>
+													<tr>
+													<td>Gibraltar</td>
+													<td>GI</td>
+													</tr>
+													<tr>
+													<td>Greece</td>
+													<td>GR</td>
+													</tr>
+													<tr>
+													<td>Greenland</td>
+													<td>GL</td>
+													</tr>
+													<tr>
+													<td>Grenada</td>
+													<td>GD</td>
+													</tr>
+													<tr>
+													<td>Guadeloupe</td>
+													<td>GP</td>
+													</tr>
+													<tr>
+													<td>Guam</td>
+													<td>GU</td>
+													</tr>
+													<tr>
+													<td>Guatemala</td>
+													<td>GT</td>
+													</tr>
+													<tr>
+													<td>Guernsey</td>
+													<td>GG</td>
+													</tr>
+													<tr>
+													<td>Guinea</td>
+													<td>GN</td>
+													</tr>
+													<tr>
+													<td>Guinea-Bissau</td>
+													<td>GW</td>
+													</tr>
+													<tr>
+													<td>Guyana</td>
+													<td>GY</td>
+													</tr>
+													<tr>
+													<td>Haiti</td>
+													<td>HT</td>
+													</tr>
+													<tr>
+													<td>Heard Island and McDonald Islands</td>
+													<td>HM</td>
+													</tr>
+													<tr>
+													<td>Holy See (Vatican City State)</td>
+													<td>VA</td>
+													</tr>
+													<tr>
+													<td>Honduras</td>
+													<td>HN</td>
+													</tr>
+													<tr>
+													<td>Hong Kong</td>
+													<td>HK</td>
+													</tr>
+													<tr>
+													<td>Hungary</td>
+													<td>HU</td>
+													</tr>
+													<tr>
+													<td>Iceland</td>
+													<td>IS</td>
+													</tr>
+													<tr>
+													<td>India</td>
+													<td>IN</td>
+													</tr>
+													<tr>
+													<td>Iran</td>
+													<td>IR</td>
+													</tr>
+													<tr>
+													<td>Iraq</td>
+													<td>IQ</td>
+													</tr>
+													<tr>
+													<td>Ireland</td>
+													<td>IE</td>
+													</tr>
+													<tr>
+													<td>Isle of Man</td>
+													<td>IM</td>
+													</tr>
+													<tr>
+													<td>Israel</td>
+													<td>IL</td>
+													</tr>
+													<tr>
+													<td>Italy</td>
+													<td>IT</td>
+													</tr>
+													<tr>
+													<td>Jamaica</td>
+													<td>JM</td>
+													</tr>
+													<tr>
+													<td>Japan</td>
+													<td>JP</td>
+													</tr>
+													<tr>
+													<td>Jersey</td>
+													<td>JE</td>
+													</tr>
+													<tr>
+													<td>Jordan</td>
+													<td>JO</td>
+													</tr>
+													<tr>
+													<td>Kazakhstan</td>
+													<td>KZ</td>
+													</tr>
+													<tr>
+													<td>Kenya</td>
+													<td>KE</td>
+													</tr>
+													<tr>
+													<td>Kiribati</td>
+													<td>KI</td>
+													</tr>
+													<tr>
+													<td>Kuwait</td>
+													<td>KW</td>
+													</tr>
+													<tr>
+													<td>Kyrgyzstan</td>
+													<td>KG</td>
+													</tr>
+													<tr>
+													<td>Laos</td>
+													<td>LA</td>
+													</tr>
+													<tr>
+													<td>Latvia</td>
+													<td>LV</td>
+													</tr>
+													<tr>
+													<td>Lebanon</td>
+													<td>LB</td>
+													</tr>
+													<tr>
+													<td>Lesotho</td>
+													<td>LS</td>
+													</tr>
+													<tr>
+													<td>Liberia</td>
+													<td>LR</td>
+													</tr>
+													<tr>
+													<td>Libya</td>
+													<td>LY</td>
+													</tr>
+													<tr>
+													<td>Liechtenstein</td>
+													<td>LI</td>
+													</tr>
+													<tr>
+													<td>Lithuania</td>
+													<td>LT</td>
+													</tr>
+													<tr>
+													<td>Luxembourg</td>
+													<td>LU</td>
+													</tr>
+													<tr>
+													<td>Macao</td>
+													<td>MO</td>
+													</tr>
+													<tr>
+													<td>Macedonia (the former Yugoslav Republic of)</td>
+													<td>MK</td>
+													</tr>
+													<tr>
+													<td>Madagascar</td>
+													<td>MG</td>
+													</tr>
+													<tr>
+													<td>Malawi</td>
+													<td>MW</td>
+													</tr>
+													<tr>
+													<td>Malaysia</td>
+													<td>MY</td>
+													</tr>
+													<tr>
+													<td>Maldives</td>
+													<td>MV</td>
+													</tr>
+													<tr>
+													<td>Mali</td>
+													<td>ML</td>
+													</tr>
+													<tr>
+													<td>Malta</td>
+													<td>MT</td>
+													</tr>
+													<tr>
+													<td>Marshall Islands</td>
+													<td>MH</td>
+													</tr>
+													<tr>
+													<td>Martinique</td>
+													<td>MQ</td>
+													</tr>
+													<tr>
+													<td>Mauritania</td>
+													<td>MR</td>
+													</tr>
+													<tr>
+													<td>Mauritius</td>
+													<td>MU</td>
+													</tr>
+													<tr>
+													<td>Mayotte</td>
+													<td>YT</td>
+													</tr>
+													<tr>
+													<td>Mexico</td>
+													<td>MX</td>
+													</tr>
+													<tr>
+													<td>Micronesia (Federated States of)</td>
+													<td>FM</td>
+													</tr>
+													<tr>
+													<td>Moldova</td>
+													<td>MD</td>
+													</tr>
+													<tr>
+													<td>Monaco</td>
+													<td>MC</td>
+													</tr>
+													<tr>
+													<td>Mongolia</td>
+													<td>MN</td>
+													</tr>
+													<tr>
+													<td>Montenegro</td>
+													<td>ME</td>
+													</tr>
+													<tr>
+													<td>Montserrat</td>
+													<td>MS</td>
+													</tr>
+													<tr>
+													<td>Morocco</td>
+													<td>MA</td>
+													</tr>
+													<tr>
+													<td>Mozambique</td>
+													<td>MZ</td>
+													</tr>
+													<tr>
+													<td>Myanmar</td>
+													<td>MM</td>
+													</tr>
+													<tr>
+													<td>Namibia</td>
+													<td>NA</td>
+													</tr>
+													<tr>
+													<td>Nauru</td>
+													<td>NR</td>
+													</tr>
+													<tr>
+													<td>Nepal</td>
+													<td>NP</td>
+													</tr>
+													<tr>
+													<td>Netherlands</td>
+													<td>NL</td>
+													</tr>
+													<tr>
+													<td>Netherlands Antilles</td>
+													<td>AN</td>
+													</tr>
+													<tr>
+													<td>New Caledonia</td>
+													<td>NC</td>
+													</tr>
+													<tr>
+													<td>New Zealand</td>
+													<td>NZ</td>
+													</tr>
+													<tr>
+													<td>Nicaragua</td>
+													<td>NI</td>
+													</tr>
+													<tr>
+													<td>Niger</td>
+													<td>NE</td>
+													</tr>
+													<tr>
+													<td>Nigeria</td>
+													<td>NG</td>
+													</tr>
+													<tr>
+													<td>Niue</td>
+													<td>NU</td>
+													</tr>
+													<tr>
+													<td>Norfolk Island</td>
+													<td>NF</td>
+													</tr>
+													<tr>
+													<td>Northern Mariana Islands</td>
+													<td>MP</td>
+													</tr>
+													<tr>
+													<td>Norway</td>
+													<td>NO</td>
+													</tr>
+													<tr>
+													<td>Oman</td>
+													<td>OM</td>
+													</tr>
+													<tr>
+													<td>Pakistan</td>
+													<td>PK</td>
+													</tr>
+													<tr>
+													<td>Palau</td>
+													<td>PW</td>
+													</tr>
+													<tr>
+													<td>Palestinian Territory, Occupied</td>
+													<td>PS</td>
+													</tr>
+													<tr>
+													<td>Panama</td>
+													<td>PA</td>
+													</tr>
+													<tr>
+													<td>Papua New Guinea</td>
+													<td>PG</td>
+													</tr>
+													<tr>
+													<td>Paraguay</td>
+													<td>PY</td>
+													</tr>
+													<tr>
+													<td>Peru</td>
+													<td>PE</td>
+													</tr>
+													<tr>
+													<td>Philippines</td>
+													<td>PH</td>
+													</tr>
+													<tr>
+													<td>Pitcairn</td>
+													<td>PN</td>
+													</tr>
+													<tr>
+													<td>Poland</td>
+													<td>PL</td>
+													</tr>
+													<tr>
+													<td>Portugal</td>
+													<td>PT</td>
+													</tr>
+													<tr>
+													<td>Puerto Rico</td>
+													<td>PR</td>
+													</tr>
+													<tr>
+													<td>Qatar</td>
+													<td>QA</td>
+													</tr>
+													<tr>
+													<td>RÃ©union</td>
+													<td>RE</td>
+													</tr>
+													<tr>
+													<td>Romania</td>
+													<td>RO</td>
+													</tr>
+													<tr>
+													<td>Rwanda</td>
+													<td>RW</td>
+													</tr>
+													<tr>
+													<td>Saint BarthÃ©lemy</td>
+													<td>BL</td>
+													</tr>
+													<tr>
+													<td>Saint Helena</td>
+													<td>SH</td>
+													</tr>
+													<tr>
+													<td>Saint Kitts and Nevis</td>
+													<td>KN</td>
+													</tr>
+													<tr>
+													<td>Saint Lucia</td>
+													<td>LC</td>
+													</tr>
+													<tr>
+													<td>Saint Martin</td>
+													<td>MF</td>
+													</tr>
+													<tr>
+													<td>Saint Pierre and Miquelon</td>
+													<td>PM</td>
+													</tr>
+													<tr>
+													<td>Saint Vincent and The Grenadines</td>
+													<td>VC</td>
+													</tr>
+													<tr>
+													<td>Samoa</td>
+													<td>WS</td>
+													</tr>
+													<tr>
+													<td>San Marino</td>
+													<td>SM</td>
+													</tr>
+													<tr>
+													<td>Sao Tome and Principe</td>
+													<td>ST</td>
+													</tr>
+													<tr>
+													<td>Saudi Arabia</td>
+													<td>SA</td>
+													</tr>
+													<tr>
+													<td>Senegal</td>
+													<td>SN</td>
+													</tr>
+													<tr>
+													<td>Serbia</td>
+													<td>RS</td>
+													</tr>
+													<tr>
+													<td>Seychelles</td>
+													<td>SC</td>
+													</tr>
+													<tr>
+													<td>Sierra Leone</td>
+													<td>SL</td>
+													</tr>
+													<tr>
+													<td>Singapore</td>
+													<td>SG</td>
+													</tr>
+													<tr>
+													<td>Slovakia</td>
+													<td>SK</td>
+													</tr>
+													<tr>
+													<td>Slovenia</td>
+													<td>SI</td>
+													</tr>
+													<tr>
+													<td>Solomon Islands</td>
+													<td>SB</td>
+													</tr>
+													<tr>
+													<td>Somalia</td>
+													<td>SO</td>
+													</tr>
+													<tr>
+													<td>South Africa</td>
+													<td>ZA</td>
+													</tr>
+													<tr>
+													<td>South Georgia and The South Sandwich Islands</td>
+													<td>GS</td>
+													</tr>
+													<tr>
+													<td>South Korea</td>
+													<td>KR</td>
+													</tr>
+													<tr>
+													<td>Spain</td>
+													<td>ES</td>
+													</tr>
+													<tr>
+													<td>Sri Lanka</td>
+													<td>LK</td>
+													</tr>
+													<tr>
+													<td>Sudan</td>
+													<td>SD</td>
+													</tr>
+													<tr>
+													<td>Suriname</td>
+													<td>SR</td>
+													</tr>
+													<tr>
+													<td>Svalbard and Jan Mayen</td>
+													<td>SJ</td>
+													</tr>
+													<tr>
+													<td>Swaziland</td>
+													<td>SZ</td>
+													</tr>
+													<tr>
+													<td>Sweden</td>
+													<td>SE</td>
+													</tr>
+													<tr>
+													<td>Switzerland</td>
+													<td>CH</td>
+													</tr>
+													<tr>
+													<td>Syria</td>
+													<td>SY</td>
+													</tr>
+													<tr>
+													<td>Taiwan, Province of China</td>
+													<td>TW</td>
+													</tr>
+													<tr>
+													<td>Tajikistan</td>
+													<td>TJ</td>
+													</tr>
+													<tr>
+													<td>Tanzania</td>
+													<td>TZ</td>
+													</tr>
+													<tr>
+													<td>Thailand</td>
+													<td>TH</td>
+													</tr>
+													<tr>
+													<td>Timor-Leste</td>
+													<td>TL</td>
+													</tr>
+													<tr>
+													<td>Togo</td>
+													<td>TG</td>
+													</tr>
+													<tr>
+													<td>Tokelau</td>
+													<td>TK</td>
+													</tr>
+													<tr>
+													<td>Tonga</td>
+													<td>TO</td>
+													</tr>
+													<tr>
+													<td>Trinidad and Tobago</td>
+													<td>TT</td>
+													</tr>
+													<tr>
+													<td>Tunisia</td>
+													<td>TN</td>
+													</tr>
+													<tr>
+													<td>Turkmenistan</td>
+													<td>TM</td>
+													</tr>
+													<tr>
+													<td>Turks and Caicos Islands</td>
+													<td>TC</td>
+													</tr>
+													<tr>
+													<td>Tuvalu</td>
+													<td>TV</td>
+													</tr>
+													<tr>
+													<td>Uganda</td>
+													<td>UG</td>
+													</tr>
+													<tr>
+													<td>Ukraine</td>
+													<td>UA</td>
+													</tr>
+													<tr>
+													<td>United Arab Emirates</td>
+													<td>AE</td>
+													</tr>
+													<tr>
+													<td>United States</td>
+													<td>US</td>
+													</tr>
+													<tr>
+													<td>Uruguay</td>
+													<td>UY</td>
+													</tr>
+													<tr>
+													<td>Uzbekistan</td>
+													<td>UZ</td>
+													</tr>
+													<tr>
+													<td>Vanuatu</td>
+													<td>VU</td>
+													</tr>
+													<tr>
+													<td>Venezuela</td>
+													<td>VE</td>
+													</tr>
+													<tr>
+													<td>Vietnam</td>
+													<td>VN</td>
+													</tr>
+													<tr>
+													<td>Virgin Islands, British</td>
+													<td>VG</td>
+													</tr>
+													<tr>
+													<td>Virgin Islands, U.S.</td>
+													<td>VI</td>
+													</tr>
+													<tr>
+													<td>Wallis and Futuna</td>
+													<td>WF</td>
+													</tr>
+													<tr>
+													<td>Western Sahara</td>
+													<td>EH</td>
+													</tr>
+													<tr>
+													<td>Yemen</td>
+													<td>YE</td>
+													</tr>
+													<tr>
+													<td>Zambia</td>
+													<td>ZM</td>
+													</tr>
+													<tr>
+													<td>Zimbabwe</td>
+													<td>ZW</td>
+													</tr>
+													</tbody>
+											</table>
+										</p>
+									</div>
+									
+								</div>
+							</section>
+
+
+					<!-- Discord Server -->
+						<section id="cta" class="main special">
+							<header class="major">
+								<h2>Join the Discord Server...</h2>
+								<p>We have a Discord Server where you can get help and contribute in a growing community of open source sneakerheads.</p>
+							</header>
+							<footer class="major">
+								<ul class="actions special">
+									<li><a href="https://discord.gg/jjbtWcBczb" class="button large primary">Join Discord Server</a></li>
+								</ul>
+							</footer>
+						</section>
+
+
+					</div>
+
+				<!-- Footer -->
+					<footer id="footer">
+						<p class="copyright"><a href="https://github.com/yasserqureshi1/Sneaker-Monitors">Sneaker Monitors</a>. 2021.</p>
+					</footer>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>

@@ -1,0 +1,137 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>Sneaker Monitors - FAQs</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Header -->
+					<header id="header" class="alt">
+						<span class="logo"><img src="images/logo.PNG" style="width: 200px;height: auto;" alt="" /></span>
+                        <figcaption>Logo made by <a href="https://www.instagram.com/bri.illustratesz/">@bri.illustratesz</a></figcaption>
+						<h1>Sneaker Monitors</h1>
+						<p>
+                            A collection of web monitors that notify of restocks or updates on sneaker related sites through Discord Webhook. 
+                            <br>
+                            Built by <a href="https://github.com/yasserqureshi1">Yasser</a>
+                        </p>
+					</header>
+
+				<!-- Nav -->
+					<nav id="nav">
+						<ul>
+							<li><a href="index.html">Home</a></li>
+							<li><a href="monitors.html">Available Monitors</a></li>
+							<li><a href="installation.html">Getting Started</a></li>
+							<li><a href="params.html">Parameters</a></li>
+							<li><a href="faqs.html" class="active">FAQs</a></li>
+						</ul>
+					</nav>
+
+				<!-- Main -->
+					<div id="main">
+
+						<!-- Introduction -->
+							<section id="intro" class="main">
+								<div class="spotlight">
+									<div class="content">
+										<header class="major">
+											<h2 style="text-align: center;">FAQs</h2>
+										</header>
+                                        <p>
+                                           On this page, you will find answers to some of the most common questions and issues.
+                                        </p>
+									</div>
+								</div>
+							</section>
+
+						<!-- General Parameters -->
+							<section id="general-parameters" class="main">
+								<div class="content">
+									<p>
+										<strong>1. Can I monitor multiple Shopify sites in the same Python file?</strong>
+										<br>
+										No. You will need to duplicate the Shopify folder and have seperate links in each .env file. 
+										This is a better monitoring solution than iterating through a list of URLs because iterating through a list introduces new delays that will reduce the speed of the monitor dramatically.
+									</p>
+									<p>
+										<strong>2. I get a red error saying "ERROR: Could not build wheels for multidict which use PEP 517 and cannot be installed directly". What do I do?</strong>
+										<br>
+										You need to install the visual c++ build tools. 
+										You can do this through the <a href="https://visualstudio.microsoft.com/visual-cpp-build-tools/">Microsoft C++ Build Tools</a>.
+									</p>
+									<p>
+										<strong>3. I get a message saying PIP is not a known command.</strong>
+										<br>
+										This means you do not have PIP installed on your system. 
+										Follow the guide in <a href="installation.html">Getting Started</a> which discusses how to set up PIP
+										Or use the <a href="https://pip.pypa.io/en/stable/installing/">official PIP documentation</a> for specific installation instructions.
+									</p>
+									<p>
+										<strong>4. I get an error saying "ModuleNotFound: No module named ..."</strong>
+										<br>
+										This means you have not installed the dependencies. 
+										Please install these using pip with the command: <code>pip install -r requirements.txt</code>
+									</p>
+									<p>
+										<strong>5. I'm having issues with pip.</strong>
+										<br>
+										If you've installed it and are still having issues, ensure that it is in your PATH. 
+										For Windows check <a href="https://datatofish.com/add-python-to-windows-path/">this</a> out
+										and for Mac check <a href="https://www.educative.io/edpresso/how-to-add-python-to-the-path-variable-in-mac">this</a> out.
+									</p>
+									<p>
+										<strong>6. How do I open the .env file?</strong>
+										<br>
+										You can use notepad or any text editor.
+									</p>
+									<p>
+										<strong>7. I can't see the .env files.</strong>
+										<br>
+										This might be due to your system hiding certain files and folders.
+										For Windows check <a href="https://support.microsoft.com/en-us/windows/view-hidden-files-and-folders-in-windows-10-97fbc472-c603-9d90-91d0-1166d1d9f4b5">this</a> out
+										and for Mac check <a href="https://www.macworld.co.uk/how-to/show-hidden-files-mac-3520878/">this</a> out.
+									</p>
+								</div>
+                            </section>
+
+						<!-- Discord Server -->
+						<section id="cta" class="main special">
+							<header class="major">
+								<h2>Join the Discord Server...</h2>
+								<p>We have a Discord Server where you can get help and contribute in a growing community of open source sneakerheads.</p>
+							</header>
+							<footer class="major">
+								<ul class="actions special">
+									<li><a href="https://discord.gg/jjbtWcBczb" class="button large primary">Join Discord Server</a></li>
+								</ul>
+							</footer>
+						</section>
+
+					</div>
+
+				<!-- Footer -->
+					<footer id="footer">
+						<p class="copyright"><a href="https://github.com/yasserqureshi1/Sneaker-Monitors">Sneaker Monitors</a>. 2021.</p>
+					</footer>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
