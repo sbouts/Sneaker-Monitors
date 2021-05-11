@@ -181,6 +181,39 @@
 											Then use the following command to run the file:
 											<br>
 											<code>python [monitor].py</code>
+											<br>
+											<br>
+											If you are using a Linux server, you can run multiple monitors using <a href="https://linuxize.com/post/how-to-use-linux-screen/">Linux Screen</a>.
+											This is a terminal multiplexer, so allows you to have multiple Linux sessions within a single window.
+											You can install Linux Screen with the command:
+											<br>
+											<code>sudo apt install screen</code>
+											<br>
+											<br>
+											To start a new named screen session, use the command:
+											<br>
+											<code>screen -S [name of session]</code>
+											<br>
+											<br>
+											To close a session but leave any processes running in the background, press: 
+											<br>
+											<code>CTRL+a</code> <code>D</code>
+											<br>
+											<br>
+											If you want to list all the screens, use the command:
+											<br>
+											<code>screen -ls</code>
+											<br>
+											<br>
+											To quit a session (i.e. delete it), use the command:
+											<br>
+											<code>screen -XS [session number you want to quit] quit</code>
+											<br>
+											<br>
+											To resume a session, use the command:
+											<br>
+											<code>screen -r [session name or number you want to resume]</code>
+
 										</p>
 									</div>
 								</div>
