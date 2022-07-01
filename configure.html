@@ -84,51 +84,9 @@
 										<code>WEBHOOK = "https://discord.com/api/webhooks/..."</code>
 									</p>
 									<p>
-										<strong>Location: </strong>
-										<br>
-										This is a location code that finds free proxies for your area. 
-										You can find a list of the codes <a href="#free-proxy">here</a>.
-										<br>
-										<br>
-										<code>LOCATION = "GB"</code>
-									</p>
-									<p>
-										<strong>Delay: </strong>
-										<br>
-										This is the delay in seconds between requests.
-										Sometimes higher/lower delays may work better.
-										<br>
-										<br>
-										<code>DELAY = "1"</code>
-									</p>
-									<p>
-										<strong>Proxy: </strong>
-										<br>
-										This is an optional parameter where you can set your own proxies. 
-										There are two formats:
-										<br>
-										a) <code>PROXY = "&lt;proxy&gt;:&lt;port&gt;"</code>
-										<br>
-										b) <code>PROXY = "&lt;proxy_username&gt;:&lt;proxy_password&gt;@&lt;proxy_domain&gt;:&lt;port&gt;"</code>
-										<br>
-										You can use multiple proxies by seperating each proxy with a <code>%</code>.		 
-										<br>
-										<br>
-										<code>PROXY = "000.000.000.00:111%222.222.222.22:333"</code>
-									</p>
-									<p>
-										<strong>Keywords: </strong>
-										<br>
-										This is an optional parameter which will allow you to only get notified of specific products that contain any of these keywords within its product name.
-										You can use multiple keywords by seperating each keyword with a <code>%</code>.
-										<br>
-										<br>
-										<code>KEYWORDS = "box%logo"</code>
-									</p>
-									<p>
 										<strong>Discord Bot - Username: </strong>
 										<br>
-										This is the username that the bot will use.
+										This is the username that the bot user will use.
 										<br>
 										<br>
 										<code>USERNAME = "Supreme Monitor"</code>
@@ -136,7 +94,7 @@
 									<p>
 										<strong>Discord Bot - Avatar: </strong>
 										<br>
-										This is the avatar that that bot will use on Discord. 
+										This is the avatar that that bot user will use on Discord. 
 										You can provide either a url to the image or the path to the image (if the image is stored locally).
 										<br>
 										<br>
@@ -152,6 +110,57 @@
 										<br>
 										<code>COLOUR = 12845619</code>
 									</p>
+									<p>
+										<strong>Delay: </strong>
+										<br>
+										This is the delay in seconds between requests.
+										Sometimes higher/lower delays may work better.
+										<br>
+										<br>
+										<code>DELAY = "1"</code>
+									</p>
+									<p>
+										<strong>Keywords: </strong>
+										<br>
+										This is an optional parameter which will allow you to only get notified of specific products that contain any of these keywords within its product name.
+										You can use multiple keywords by seperating each keyword with a space.
+										<br>
+										<br>
+										<code>KEYWORDS = "nike jordan dunk"</code>
+									</p>
+									<p>
+										<strong>Proxy: </strong>
+										<br>
+										This is an optional parameter where you can set your own proxies. 
+										There are two formats:
+										<br>
+										a) <code>PROXY = "&lt;proxy&gt;:&lt;port&gt;"</code>
+										<br>
+										b) <code>PROXY = "&lt;proxy_username&gt;:&lt;proxy_password&gt;@&lt;proxy_domain&gt;:&lt;port&gt;"</code>
+										<br>
+										You can use multiple proxies by seperating each proxy with a space.		 
+										<br>
+										<br>
+										<code>PROXY = "000.000.000.00:111 222.222.222.22:333"</code>
+									</p>
+
+									<p>
+										<strong>Free Proxy: </strong>
+										<br>
+										This is a boolean variable whether requests are made with free proxies.
+										<br>
+										<br>
+										<code>FREE_PROXY = True</code>
+									</p>
+									<p>
+										<strong>Details: </strong>
+										<br>
+										These are extra parameters that may be needed for specific monitors
+										<br>
+										<br>
+										<code>LOCATION = "GB"</code>
+									</p>
+
 								</div>
                             </section>
 						
@@ -162,7 +171,7 @@
 									<p style="text-align:center;">
 										The monitors already come with a free proxy service set up. 
 										These proxies are scraped from <a href="https://www.sslproxies.org">SSL Proxies</a>. 
-										Note that I do not have any affiliation with them and you these proxies at your own risk.
+										Note that I do not have any affiliation with them, so use these proxies at your own risk.
 										<br>
 										<br>
 										To use these monitors, the <code>LOCATION</code> parameter needs to be set.
