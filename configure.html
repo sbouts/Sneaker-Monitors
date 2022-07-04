@@ -56,6 +56,7 @@
 												<li><a href="#free-proxy">Free Proxy</a></li>
 												<li><a href="#monitor-specific-params">Monitor Specific Parameters</a></li>
 												<ul>
+													<li><a href="#footlocker">Footlocker</a></li>
 													<li><a href="#snkrs">SNKRS</a></li>
 													<li><a href="#shopify">Shopify</a></li>
 													<li><a href="#solebox">Solebox</a></li>
@@ -329,6 +330,48 @@
 										Some monitors require a few extra details.
 										This section will mention those parameters and how they should be set.
 									</p>
+									<div id="footlocker">
+										<p>
+											<strong>Footlocker</strong>
+											<br>
+											The Footlocker monitor can be used in a handful of countries but this needs to be set in the
+											<code>DETAILS</code> parameter. Below is a table of all the countries that are available.
+											<br><br>
+											For example, for the Australian Footlocker, we set...
+											<br>
+											<pre><code>DETAILS = "AU"</code></pre>
+											<br>
+											<b>Table of Country and Language Codes:</b>
+										</p>
+										<div class="table-wrapper">
+											<table class="alt">
+												<thead>
+													<tr>
+														<th>Country</th>
+														<th>Country Code</th>
+													</tr>
+												</thead>
+												<tbody>
+													<tr>
+														<td>United Kingdom</td>
+														<td>UK</td>
+
+													</tr>
+													<tr>
+														<td>United States</td>
+														<td>US</td>
+													</tr>
+													<tr>
+														<td>Australia</td>
+														<td>AU</td>
+													</tr>
+
+												</tbody>
+											</table>
+										</div>
+									</div>
+
+
 									<div id="snkrs">
 										<p>
 											<strong>Nike SNKRS</strong>
@@ -338,7 +381,7 @@
 											<br>
 											<br>
 											Example: If I want the Belgium site, I find the corresponding country code and language code in the table.
-											We see that the country code is <code>"BE>"</code>, and there are 4 choices for the language (<code>en-GB</code>, <code>nl</code>, <code>de</code> or <code>fr</code>).
+											We see that the country code is <code>"BE"</code>, and there are 4 choices for the language (<code>en-GB</code>, <code>nl</code>, <code>de</code> or <code>fr</code>).
 											Choose the language you want. In this case I want English, so will use <code>en-GB</code>.
 											When you are configuring the SNKRS monitor, you should place the country code followed by the language code within the <code>DETAILS</code> section as below:
 											<br>
