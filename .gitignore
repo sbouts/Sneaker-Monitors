@@ -1,8 +1,8 @@
 # Project exclude paths
-/venv/
-Supreme/suplog.log
-SNKRS/SNKRSlog.log
-Shopify/Shopifylog.log
-Footsites/Footlocker/Footlockerlog.log
+__pycache__/
+venv/
+*.log
 .idea
 .vscode
+config.db
+snkrs.py
