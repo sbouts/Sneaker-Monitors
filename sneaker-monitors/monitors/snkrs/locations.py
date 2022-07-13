@@ -68,7 +68,6 @@ def standard_api(ITEMS, LOCATION, LANGUAGE, user_agent, proxy, KEYWORDS, start):
                         if KEYWORDS != []:
                             for key in KEYWORDS:
                                 if key.lower() in product['productContent']['fullTitle'].lower():
-                                    print("Keyword {} found in title {}".format(key.lower(), product['productContent']['fullTitle'].lower()))
                                     first = 0
                                     sizes = ''
                                     for k in product['availableGtins']:
@@ -77,6 +76,7 @@ def standard_api(ITEMS, LOCATION, LANGUAGE, user_agent, proxy, KEYWORDS, start):
                                             if item in ITEMS:
                                                 pass
                                             else:
+                                                print("Keyword {} found in title {}".format(key.lower(), product['productContent']['fullTitle'].lower()))
                                                 ITEMS.append(item)
                                                 
                                                 for s in product['skus']:
