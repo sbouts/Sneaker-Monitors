@@ -61,50 +61,50 @@ def standard_api(ITEMS, LOCATION, LANGUAGE, user_agent, proxy, KEYWORDS, start):
         output = json.loads(html.text)
 
         # Stores details in array
-        for item in output['objects']:
+        for items in output['objects']:
             try:
-                for product in item['productInfo']:
-                    if product['availablity']['available'] == True and product['merchProduct']['status'] == 'ACTIVE':
-                        if KEYWORDS == []:
-                            first = 0
-                            sizes = ''
-                            for k in product['availableGtins']:
-                                item = [product['productContent']['fullTitle'], product['productContent']['colorDescription'], k['gtin']]
-                                if k['available'] == True:
-                                    if item in ITEMS:
-                                        pass
-                                    else:
-                                        ITEMS.append(item)
-                                        
-                                        for s in product['skus']:
-                                            if first == 0:
-                                                if s['gtin'] == k['gtin']:
-                                                    sizes = str(s['nikeSize']) + ': ' + str(k['level'])
-                                                    first = 1
-                                                    break
-                                            else:
-                                                if s['gtin'] == k['gtin']:
-                                                    sizes += '\n' + str(s['nikeSize']) + ': ' + str(k['level'])
-                                                    break
-                                else:
-                                    if item in ITEMS:
-                                        ITEMS.remove(item)
-                            
-                            if sizes != '' and start == 0:
-                                print('Sending notification to Discord...')
-                                to_discord.append(dict(
-                                    title=product['productContent']['fullTitle'],
-                                    description=product['productContent']['colorDescription'],
-                                    url='https://www.nike.com/' + LOCATION + '/launch/t/' + product['productContent']['slug'],
-                                    thumbnail=item['publishedContent']['nodes'][0]['nodes'][0]['properties']['squarishURL'],
-                                    price=str(product['merchPrice']['currentPrice']),
-                                    style_code=str(product['merchProduct']['styleColor']),
-                                    sizes=sizes))
-
-                        else:
+                for product in items['productInfo']:
+                    if product['availability']['available'] == True and product['merchProduct']['status'] == 'ACTIVE':
+                        if KEYWORDS != []:
                             for key in KEYWORDS:
-                                if key.lower() in product['merchProduct']['labelName'].lower() or key.lower() in product['productContent']['colorDescription'].lower():
-                                    pass
+                                if key.lower() in product['productContent']['fullTitle'].lower():
+                                    print("Keyword {} found in title {}".format(key.lower(), product['productContent']['fullTitle'].lower()))
+                                    first = 0
+                                    sizes = ''
+                                    for k in product['availableGtins']:
+                                        item = [product['productContent']['fullTitle'], product['productContent']['colorDescription'], k['gtin']]
+                                        if k['available'] == True:
+                                            if item in ITEMS:
+                                                pass
+                                            else:
+                                                ITEMS.append(item)
+                                                
+                                                for s in product['skus']:
+                                                    if first == 0:
+                                                        if s['gtin'] == k['gtin']:
+                                                            sizes = str(s['nikeSize']) + ': ' + str(k['level'])
+                                                            first = 1
+                                                            break
+                                                    else:
+                                                        if s['gtin'] == k['gtin']:
+                                                            sizes += '\n' + str(s['nikeSize']) + ': ' + str(k['level'])
+                                                            break
+                                        else:
+                                            if item in ITEMS:
+                                                ITEMS.remove(item)
+                                
+                                    if sizes != '' and start == 0:
+                                        print('Sending notification to Discord...')
+                                        to_discord.append(dict(
+                                            title=product['productContent']['fullTitle'],
+                                            description=product['productContent']['colorDescription'],
+                                            url='https://www.nike.com/' + LOCATION + '/launch/t/' + product['productContent']['slug'],
+                                            thumbnail=items['publishedContent']['nodes'][0]['properties']['squarishURL'],
+                                            price=str(product['merchPrice']['currentPrice']),
+                                            style_code=str(product['merchProduct']['styleColor']),
+                                            sizes=sizes))
+                        else:
+                            pass
 
             except:
                 pass

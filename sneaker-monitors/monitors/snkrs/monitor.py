@@ -26,7 +26,7 @@ for i in item:
     AVATAR_URL = i[3]
     COLOUR = i[4]
     DELAY = i[5]
-    KEYWORDS = None if i[6] is None else i[6]
+    KEYWORDS = [] if i[6] is None else i[6].split()
     PROXIES = [] if i[7] is None else i[7]
     FREE_PROXY = i[8]   #location
     DETAILS = i[9]
@@ -63,7 +63,7 @@ def discord_webhook(title, description, url, thumbnail, price, style_code, sizes
             'url': url,
             'thumbnail': {'url': thumbnail},
             'color': int(COLOUR),
-            'footer': {'text': 'Developed by GitHub:yasserqureshi1'},
+            'footer': {'text': 'Adjusted by GitHub:sbouts'},
             'timestamp': str(datetime.utcnow()),
             'fields': [
                 {'name': 'Price', 'value': price},
